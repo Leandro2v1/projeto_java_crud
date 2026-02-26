@@ -44,6 +44,17 @@ public class ProdutoService {
 		}
 	}
 	
+	public void remover(Long id) {
+		Produto produto = buscarPorId(id);
+		if (produto != null) {
+			prod.remove(produto);
+			System.out.println("Produto removido com sucesso!");
+		}
+		else {
+			System.out.println("Produto não encontrado!");
+		}
+	}
+	
 }
 
 
